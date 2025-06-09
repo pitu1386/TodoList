@@ -1,0 +1,286 @@
+﻿.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.refresh-section {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 1rem; /* Espacio entre botones */
+    align-items: center; /* Alineación vertical */
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.loading, .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.todo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.todo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5e9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .todo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+    .todo-header h3 {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 1.4em;
+    }
+
+.category-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-work {
+    background-color: #3498db;
+    color: white;
+}
+
+.category-personal {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.category-health {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.category-education {
+    background-color: #f39c12;
+    color: white;
+}
+
+.category-hobby {
+    background-color: #9b59b6;
+    color: white;
+}
+
+.todo-description {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-text {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+    .status-badge.completed {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .status-badge.in-progress {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+/* BARRA DE PROGRESO PRINCIPAL - CORREGIDA */
+.progress-bar-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.progress-bar-background {
+    width: 100%;
+    height: 24px;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+    border-radius: 12px;
+    transition: width 0.8s ease;
+    position: relative;
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #2c3e50;
+    z-index: 2;
+}
+
+/* PROGRESIONES DETALLADAS */
+.progressions-detail {
+    border-top: 1px solid #e9ecef;
+    padding-top: 16px;
+}
+
+    .progressions-detail h4 {
+        margin: 0 0 12px 0;
+        color: #495057;
+        font-size: 1em;
+    }
+
+.progression-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.progression-date {
+    font-size: 0.8em;
+    color: #6c757d;
+    min-width: 80px;
+}
+
+.progression-percent {
+    font-weight: 600;
+    color: #28a745;
+    min-width: 50px;
+}
+
+.progression-cumulative {
+    font-size: 0.8em;
+    color: #6c757d;
+    min-width: 80px;
+}
+
+.mini-progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.mini-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .todo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .refresh-section {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+ 
